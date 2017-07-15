@@ -18,6 +18,6 @@ $ python most_similar.py --input_folder_fake_img "folder1" --input_folder_real_i
 
 **Example**
 
-I chose 10 cute looking 128x128 images of cats using a trained DCGAN with SELU and looked for the 5 most similar cats. Here's the results (Top row contains the generated cats):
+I chose 10 cute looking 128x128 images of cats using a trained DCGAN with SELU and looked for the 5 most similar cats. Here's the results (Top row contains the generated (fake) cats):
 ![](/images/DCGAN_SELU_128X128_most_similar_images1.png)
 ![](/images/DCGAN_SELU_128X128_most_similar_images2.png)
