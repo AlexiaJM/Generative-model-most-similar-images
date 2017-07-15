@@ -74,8 +74,9 @@ for imagePath_fake in glob.glob('%s/*.%s' % (param.input_folder_fake_img,param.f
 		if similarity > min_similarity:
 			most_similar_images[min_index] = imagePath_real
 			most_similar_images_ssim[min_index] = similarity
+	# Sort from most similar to least similar in top 5
+	most_similar_images = [x2 for (x1,x2) in sorted(zip(most_similar_images_ssim,most_similar_images), reverse=True)]
 	# Add most similar ones to picture
-	most_similar_images.sort()
 	current_image = image_fake
 	for imagePath_real in most_similar_images:
 		image_real = cv2.imread(imagePath_real)
